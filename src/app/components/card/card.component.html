@@ -1,0 +1,50 @@
+<mat-card>
+  <ng-container *ngIf="!item.id">
+    <img mat-card-image src="{{album.image ? album.image : artist.image}}">
+  </ng-container>
+  <ng-container *ngIf="item.id">
+    <ng-container *ngFor="let artist of artists">
+      <ng-container *ngIf="artist.id == item.artistId">
+        <img mat-card-image src="{{artist.image}}">
+      </ng-container>
+    </ng-container>
+  </ng-container>
+  <mat-card-content>
+    <mat-card-title>
+      <ng-container *ngIf="item.name">
+        {{item.name}}
+      </ng-container>
+      <a routerLink="{{album.id ? '../albums/'+album.id : artist.id }}">{{album.name ? album.name : artist.name}}</a>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <ng-container *ngIf="item.artistId">
+        <ng-container *ngFor="let artist of artists">
+          <ng-container *ngIf="artist.id == item.artistId">
+            <a routerLink="/artists/{{artist.id}}"><img src="{{artist.image}}"></a> <a routerLink="/artists/{{artist.id}}">{{artist.name}}</a>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+      <ng-container *ngIf="album.tracks">
+        <p>Number of songs: {{album.tracks.length}}</p>
+      </ng-container>
+
+      <ng-container *ngIf="artist.id">
+        <ng-container *ngFor="let a of artists">
+          <ng-container *ngIf="a.id == artist.id">
+            <p>Number of songs: {{artist.tracks.length}}</p>
+          </ng-container>
+        </ng-container>
+      </ng-container>
+    </mat-card-subtitle>
+  </mat-card-content>
+  <ng-container *ngIf="item.id">
+    <button type="button" (click)="playTrack(item)">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container *ngIf="album.id">
+    <button type="button" (click)="playAlbum(album)">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+  </ng-container>
+</mat-card>

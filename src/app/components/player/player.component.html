@@ -1,0 +1,48 @@
+<div class="player" *ngIf="audioService.track.name" [@fadeInOut]>
+  <div class="player-info">
+    <div class="wave-wrapper">
+      <span class="w1" [class.bar]="audioService.playing"></span>
+      <span class="w2" [class.bar]="audioService.playing"></span>
+      <span class="w3" [class.bar]="audioService.playing"></span>
+      <span class="w4" [class.bar]="audioService.playing"></span>
+    </div>
+    <div class="player-image">
+      <img [src]="audioService.artist.image" alt="player-image">
+    </div>
+    <div class="player-text">
+      <p>Now playing</p>
+      <div class="text-animate">
+        <p>{{audioService.artist.name}} - {{audioService.track.name}} </p>
+      </div>
+    </div>
+  </div>
+  <div class="player-actions">
+    <div class="player-actions-top">
+      <button mat-fab  (click)="previousTrack()" [disabled]="!audioService.queuePosition" mat-button>
+        <mat-icon>skip_previous</mat-icon>
+      </button>
+      <button mat-fab mat-button class="play" (click)="pauseOrContinueTrack()">
+        <ng-container *ngIf="!audioService.playing">
+          <mat-icon >play_arrow</mat-icon>
+        </ng-container>
+        <ng-container *ngIf="audioService.playing">
+          <mat-icon>pause</mat-icon>
+        </ng-container>
+
+      </button>
+      <button mat-fab (click)="nextTrack()" [disabled]="(audioService.queue.length - audioService.queuePosition - 1) < 1" mat-button>
+        <mat-icon >skip_next</mat-icon>
+      </button>
+    </div>
+    <div class="player-actions-bottom">
+      <p>{{audioService.currentTime | date: 'mm:ss'}}</p>
+      <mat-slider [min]="0" [max]="audioService.duration" [value]="audioService.currentTime" step="1" #seekSlider (change)="seekTrack(seekSlider.value)" (input)="seeking(seekSlider.value)"></mat-slider>
+      <p>{{audioService.duration | date: 'mm:ss'}}</p>
+    </div>
+
+  </div>
+  <div class="player-volume">
+    <mat-icon>volume_up</mat-icon>
+    <mat-slider value="100" min="0" max="100" step="1" role="slider" aria-label="slider" #slider (input)="changeVolume(slider.value)"></mat-slider>
+  </div>
+</div>

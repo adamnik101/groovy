@@ -1,0 +1,63 @@
+.logo{
+  a{
+    height: 6vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    img{
+      height: 80%;
+    }
+    h1{
+      margin-left: 1vw;
+      margin-bottom: 0;
+      font-size: 1.5vw;
+      font-weight: 500;
+      color: #1f1f1f !important;
+      span{
+        font-family: Josefin, sans-serif !important;
+        color: #fe2c55;
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .logo{
+    a{
+      height: 7vw;
+      h1{
+        font-size: 3vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .logo{
+    a{
+      height: 10vw;
+      h1{
+        font-size: 4vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px){
+  .logo{
+    a{
+      height: 12vw;
+      h1{
+        font-size: 5vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  .logo{
+    a{
+      height: 17vw;
+      h1{
+        font-size: 6vw;
+      }
+    }
+  }
+}

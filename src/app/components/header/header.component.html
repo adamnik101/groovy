@@ -1,0 +1,13 @@
+<div class="header">
+  <ng-container *ngIf="image">
+    <img [src]="image">
+  </ng-container>
+  <div>
+    <h1>{{title}}</h1>
+    <span>{{subtitle}}</span>
+    <ng-container *ngIf="artist.id">
+      <a routerLink="/artists/{{artist.id}}"><span>By {{artist.name}}</span></a>
+    </ng-container>
+  </div>
+  <div class="divider"></div>
+</div>

@@ -1,0 +1,36 @@
+.author{
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img{
+    width: 250px;
+    border-radius: 50%;
+    margin-right: 2vw;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+  .description{
+    width: 500px;
+    color: white;
+    text-shadow: 2px 2px 5px #1f1f1f;
+    h3{
+      font-size: 30px;
+      letter-spacing: .1vw;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (max-width: 576px){
+  .author{
+    flex-direction: column;
+    .description{
+      margin-top: 30px;
+      width: 90vw;
+      p{
+
+      }
+    }
+  }
+}

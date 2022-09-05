@@ -1,0 +1,61 @@
+<app-header [title]="title" [subtitle]="subtitle"></app-header>
+<div class="contact">
+
+  <form class="form" [formGroup]="contactForm" (ngSubmit)="save()">
+ <mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Full name</mat-label>
+        <input matInput formControlName="fullname">
+        <mat-error>
+          <ng-container *ngIf="contactForm.get('fullname')?.hasError('required')">
+            Full name is required.
+          </ng-container>
+          <ng-container *ngIf="contactForm.get('fullname')?.hasError('pattern')">
+            Full name is invalid.
+          </ng-container>
+        </mat-error>
+      </mat-form-field>
+
+
+    <mat-form-field class="input-wrapper" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Ex. 100 Main St" formControlName="email">
+      <mat-error>
+        <ng-container *ngIf="contactForm.get('email')?.hasError('required')">
+          Email is required.
+        </ng-container>
+        <ng-container *ngIf="contactForm.get('email')?.hasError('email')">
+          Email format is invalid. (eq. johndoe@gmail.com)
+        </ng-container>
+      </mat-error>
+    </mat-form-field>
+
+
+    <table class="table"><tr>
+      <td><mat-form-field class="input-wrapper" appearance="outline">
+        <mat-label>Subject</mat-label>
+        <input matInput placeholder="Ex. San Francisco" formControlName="subject">
+      </mat-form-field></td>
+    </tr></table>
+    <mat-form-field class="input-wrapper" appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea matInput maxlength="250" placeholder="Ex. I need help with..." rows="10" formControlName="message" #messageText></textarea>
+      <mat-error>
+        <ng-container *ngIf="contactForm.get('message')?.hasError('required')">
+          Message is required.
+        </ng-container>
+        <ng-container *ngIf="contactForm.get('message')?.hasError('minlength')">
+          Minimum length of a message is 20 characters.
+        </ng-container>
+        <ng-container *ngIf="contactForm.get('message')?.hasError('maxlength')">
+          Maximum length of a message is 250 characters.
+        </ng-container>
+      </mat-error>
+      <mat-hint align="end">{{messageText.value.length}} / {{messageText.maxLength}}</mat-hint>
+    </mat-form-field>
+    <button mat-raised-button (click)="save()" [disabled]="contactForm.invalid">Send message</button>
+  </form>
+  <div class="contact-image">
+    <img src="assets/images/other/contact.jpg" alt="earphones">
+  </div>
+</div>
+

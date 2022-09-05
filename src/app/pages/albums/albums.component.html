@@ -1,0 +1,8 @@
+<app-header [title]="title" [subtitle]="subtitle"></app-header>
+<div class="albums">
+  <div class="card-container">
+    <ng-container *ngFor="let album of albums">
+      <app-card [album]="album"></app-card>
+    </ng-container>
+  </div>
+</div>

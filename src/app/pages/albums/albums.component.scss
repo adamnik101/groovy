@@ -1,0 +1,8 @@
+.albums{
+  padding-left: 1vw;
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

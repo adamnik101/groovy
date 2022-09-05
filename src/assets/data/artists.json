@@ -1,0 +1,44 @@
+[
+    {
+      "id": 2,
+      "name": "Nina Todorovic",
+      "image": "assets/images/artists/nina.jpg",
+      "tracks": [2,11]
+    },
+    {
+      "id": 3,
+      "name": "RIE",
+      "image": "assets/images/artists/rie.jpg",
+      "tracks": [3,4]
+    },
+    {
+      "id": 4,
+      "name": "LXST CENTURY",
+      "image": "assets/images/artists/lxst.jpg",
+      "tracks": [5,6,7]
+    },
+    {
+      "id": 5,
+      "name": "Elena",
+      "image": "assets/images/artists/elena.jpg",
+      "tracks": [8]
+    },
+    {
+      "id": 6,
+      "name": "SDM",
+      "image": "assets/images/artists/sdm.jpg",
+      "tracks": [9]
+    },
+    {
+      "id": 7,
+      "name": "ArrDee",
+      "image": "assets/images/artists/ardee.jpg",
+      "tracks": [10]
+    },
+    {
+      "id": 8,
+      "name": "Khalid",
+      "image": "assets/images/artists/khalid.jpg",
+      "tracks": [12,13,14]
+    }
+  ]

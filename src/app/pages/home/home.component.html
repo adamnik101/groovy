@@ -1,0 +1,17 @@
+<app-header [title]="title[0]" [subtitle]="subtitle[0]"></app-header>
+<div class="home">
+  <div class="card-container">
+    <ng-container *ngFor="let track of tracks">
+      <app-card [item]="track" [artists]="artists"></app-card>
+    </ng-container>
+  </div>
+</div>
+<app-header [title]="title[1]" [subtitle]="subtitle[1]"></app-header>
+<div class="home">
+  <div class="card-container">
+    <ng-container *ngFor="let album of albums">
+      <app-card [album]="album" [artists]="artists"></app-card>
+    </ng-container>
+  </div>
+
+</div>

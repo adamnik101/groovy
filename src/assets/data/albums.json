@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "PULS",
+      "image": "assets/images/albums/puls.jpg",
+      "tracks": [2,11]
+    },
+    {
+      "id": 2,
+      "name": "Radical",
+      "image": "assets/images/albums/radical.jpg",
+      "tracks": [5,6,7]
+    },
+    {
+      "id": 3,
+      "name": "Suncity",
+      "image": "assets/images/albums/suncity.jpg",
+      "tracks": [12,13,14]
+    }
+  ]

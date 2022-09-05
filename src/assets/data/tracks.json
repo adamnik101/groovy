@@ -1,0 +1,80 @@
+[
+  {
+    "id" : 2,
+    "name": "Prvi put",
+    "artistId": 2,
+    "artistFeatures" :  [3],
+    "src": "assets/tracks/Nina Todorovic x Rie - Prvi Put.mp3"
+  },
+  {
+    "id" : 3,
+    "name": "Noći u Dubaiju",
+    "artistId": 3,
+    "src": "assets/tracks/Rie - Noći u Dubaiju.mp3"
+  },{
+  "id" : 4,
+  "name": "Bes",
+  "artistId": 3,
+  "src": "assets/tracks/RIE - BES.mp3"
+  },
+  {
+    "id" : 5,
+    "name": "Amnesia",
+    "artistId": 4,
+    "src": "assets/tracks/LXST CXNTURY - AMNESIA.mp3"
+  },
+  {
+    "id" : 6,
+    "name": "Andromeda",
+    "artistId": 4,
+    "src": "assets/tracks/LXST CXNTURY - ANDROMEDA.mp3"
+  },
+  {
+    "id" : 7,
+    "name": "Odium",
+    "artistId": 4,
+    "src": "assets/tracks/LXST CXNTURY - ODIUM (official video).mp3"
+  },
+  {
+    "id" : 8,
+    "name": "Colombiana",
+    "artistId": 5,
+    "src": "assets/tracks/Elena x 2Bona - Colombiana - (Official video).mp3"
+  },
+  {
+    "id" : 9,
+    "name": "Passat",
+    "artistId": 6,
+    "src": "assets/tracks/Passat.mp3"
+  },
+  {
+    "id" : 10,
+    "name": "Hello mate",
+    "artistId": 7,
+    "src": "assets/tracks/ArrDee – Hello Mate ft. Kyla (Official Video).mp3"
+  },
+  {
+    "id" : 11,
+    "name": "Ko sam sada",
+    "artistId": 2,
+    "src": "assets/tracks/Nina Todorovic - Ko Sam Sada.mp3"
+  },
+  {
+    "id" : 12,
+    "name": "Vertigo",
+    "artistId": 8,
+    "src": "assets/tracks/Khalid - Vertigo (Official Audio).mp3"
+  },
+  {
+    "id" : 13,
+    "name": "Suncity",
+    "artistId": 8,
+    "src": "assets/tracks/Khalid - Suncity (Official Audio) ft. Empress Of.mp3"
+  },
+  {
+    "id" : 14,
+    "name": "Saturday Nights",
+    "artistId": 8,
+    "src": "assets/tracks/Khalid - Saturday Nights (Official Audio).mp3"
+  }
+]
