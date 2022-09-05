@@ -1,3 +1,5 @@
+# Instrukcije
+  Pokrenite u terminalu `npm install` i nakon toga `ng serve`
 # Final
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
